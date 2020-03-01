@@ -13,9 +13,9 @@ pipeline {
         stage('Prepare') {
             steps {
               echo "git checkout"
-              echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"
-              echo "APP_NAME = ${env.FOO}"
-              bat  'echo "I can access $BUILD_NUMBER in shell command as well."'
+              echo "You can also use BUILD_NUMBER -> ${BUILD_NUMBER}"
+              echo "APP_NAME = ${env.APP_NAME}"
+              bat  "echo I can access $BUILD_NUMBER in shell command as well."
               git branch: 'master',
                   url: 'https://github.com/avrylkov/demo-gradle.git'            
               bat "dir"
