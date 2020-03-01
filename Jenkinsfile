@@ -7,8 +7,10 @@ pipeline {
          */
         stage('Prepare') {
             steps {
+              echo "git checkout"
               git branch: 'master',
                   url: 'https://github.com/avrylkov/demo-gradle.git'            
+              bat "dir"
             }
          }
       }    
