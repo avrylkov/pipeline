@@ -2,7 +2,7 @@ pipeline {
   agent any
   
   environment {
-        APP_NAME = "bar"
+        APP_NAME = "my_service"
     }
   
   stages {
